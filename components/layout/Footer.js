@@ -63,8 +63,11 @@ const Footer = ({ navigation }) => {
   return (
     <>
       <View style={styles.container}>
-        {menus.map((item) => (
-          <TouchableOpacity onPress={() => navigation.navigate("Home")}>
+        {menus.map((item, index) => (
+          <TouchableOpacity
+            key={index}
+            onPress={() => navigation.navigate("Home")}
+          >
             <View key={item.name}>{FooterItem(item, navigation)}</View>
           </TouchableOpacity>
         ))}

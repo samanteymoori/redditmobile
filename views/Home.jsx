@@ -14,7 +14,9 @@ const Home = ({ navigation, route }) => {
   return (
     <>
       {posts &&
-        posts.map((item) => <Post navigation={navigation} postData={item} />)}
+        posts.map((item, index) => (
+          <Post key={index} navigation={navigation} postData={item} />
+        ))}
     </>
   );
 };

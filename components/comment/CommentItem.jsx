@@ -27,8 +27,12 @@ const CommentItem = ({ commentItemData, style }) => {
       </View>
       <View style={tw`border-l-2  border-gray-200 pl-4 ml-4 mt-4`}>
         {commentItemData?.data?.replies &&
-          commentItemData?.data?.replies?.data?.children?.map((item) => (
-            <CommentItem style={`mt-2`} commentItemData={item}></CommentItem>
+          commentItemData?.data?.replies?.data?.children?.map((item, index) => (
+            <CommentItem
+              key={index}
+              style={`mt-2`}
+              commentItemData={item}
+            ></CommentItem>
           ))}
       </View>
       {

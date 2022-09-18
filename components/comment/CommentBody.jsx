@@ -6,8 +6,8 @@ import CommentItem from "./CommentItem";
 const CommentBody = ({ commentsData }) => {
   return (
     <>
-      {commentsData.map((item) => (
-        <CommentItem commentItemData={item} style={`mt-4`} />
+      {commentsData.map((item, index) => (
+        <CommentItem key={index} commentItemData={item} style={`mt-4`} />
       ))}
     </>
   );

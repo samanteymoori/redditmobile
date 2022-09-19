@@ -20,7 +20,7 @@ const PostSocial = ({ navigation, route, postData }) => {
             uri: require("../../assets/icons/arrow-up.png"),
           }}
         />
-        <Text style={{ fontFamily: "Poppins", ...tw`text-xs` }}>
+        <Text style={{ fontFamily: "Poppins", ...tw`text-xs self-center` }}>
           {postData?.data?.score < 1000
             ? postData?.data?.score
             : `${(postData?.data?.score / 1000).toFixed(1).replace(".0", "")}K`}
@@ -50,7 +50,7 @@ const PostSocial = ({ navigation, route, postData }) => {
 
         <Text
           testID="post-ups"
-          style={{ fontFamily: "Poppins", ...tw`text-xs` }}
+          style={{ fontFamily: "Poppins", ...tw`text-xs self-center` }}
         >
           {postData?.data?.num_comments < 1000
             ? postData?.data?.num_comments
@@ -64,7 +64,9 @@ const PostSocial = ({ navigation, route, postData }) => {
             uri: require("../../assets/icons/share.png"),
           }}
         />
-        <Text style={{ fontFamily: "Poppins", ...tw`mr-auto text-xs` }}>
+        <Text
+          style={{ fontFamily: "Poppins", ...tw`mr-auto text-xs self-center` }}
+        >
           Share
         </Text>
       </View>

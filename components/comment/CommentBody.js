@@ -7,7 +7,12 @@ const CommentBody = ({ commentsData }) => {
   return (
     <>
       {commentsData.map((item, index) => (
-        <CommentItem key={index} commentItemData={item} style={`mt-4`} />
+        <CommentItem
+          key={index}
+          commentLevel={0}
+          commentItemData={item}
+          style={`mt-4`}
+        />
       ))}
     </>
   );

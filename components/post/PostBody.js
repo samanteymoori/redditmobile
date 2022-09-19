@@ -24,7 +24,12 @@ const PostBody = ({ postData }) => {
         />
       )}
       <View>
-        <Text style={{ fontFamily: "Poppins", ...tw`mt-2 text-gray-400  ` }}>
+        <Text
+          style={{
+            fontFamily: "Poppins",
+            ...tw` text-gray-400  text-xs mt-4`,
+          }}
+        >
           by {postData?.data?.author} . 16h
         </Text>
       </View>

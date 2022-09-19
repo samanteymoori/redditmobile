@@ -10,7 +10,10 @@ const PostHeader = ({ postData }) => {
         {postData?.data?.subreddit_name_prefixed && (
           <Text
             testID="post-subreddit-name-prefixed"
-            style={tw`flex-1 self-center ml-2 flex-auto w-full `}
+            style={{
+              fontFamily: "Poppins",
+              ...tw`flex-1 self-center ml-2 flex-auto w-full `,
+            }}
           >
             {postData?.data?.subreddit_name_prefixed}
           </Text>

@@ -11,10 +11,12 @@ const CommentItem = ({ commentItemData, style }) => {
           <ProfileAvatar size={8} style={``} />
         </View>
         <View style={tw`flex-auto self-center`}>
-          <Text style={tw`text-gray-400 `}>
+          <Text style={{ fontFamily: "Poppins", ...tw`text-gray-400 ` }}>
             {commentItemData?.data?.author_fullname}
           </Text>
-          <Text style={tw`text-black `}>{commentItemData?.data?.body}</Text>
+          <Text style={{ fontFamily: "Poppins", ...tw`text-black ` }}>
+            {commentItemData?.data?.body}
+          </Text>
         </View>
         {commentItemData?.data?.replies && (
           <Image

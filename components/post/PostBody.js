@@ -4,7 +4,10 @@ const PostBody = ({ postData }) => {
   return (
     <>
       {postData?.data?.title && (
-        <Text style={tw`mt-2`} testID="post-title">
+        <Text
+          style={{ fontFamily: "Poppins", marginTop: 4 }}
+          testID="post-title"
+        >
           {postData?.data?.title}
         </Text>
       )}
@@ -21,7 +24,7 @@ const PostBody = ({ postData }) => {
         />
       )}
       <View>
-        <Text style={tw`mt-2 text-gray-400  `}>
+        <Text style={{ fontFamily: "Poppins", ...tw`mt-2 text-gray-400  ` }}>
           by {postData?.data?.author} . 16h
         </Text>
       </View>

@@ -26,27 +26,27 @@ const styles = StyleSheet.create({
   },
 });
 const App = () => {
-  // const [fontsLoaded] = useFonts({
-  //   Poppins: require("./assets/fonts/Poppins-Regular.ttf"),
-  // });
+  const [fontsLoaded] = useFonts({
+    Poppins: require("./assets/fonts/Poppins-Regular.ttf"),
+  });
 
-  // useEffect(() => {
-  //   async function prepare() {
-  //     await SplashScreen.preventAutoHideAsync();
-  //   }
+  useEffect(() => {
+    async function prepare() {
+      await SplashScreen.preventAutoHideAsync();
+    }
 
-  //   prepare();
-  // }, []);
+    prepare();
+  }, []);
 
-  // const onLayoutRootView = useCallback(async () => {
-  //   if (fontsLoaded) {
-  //     await SplashScreen.hideAsync();
-  //   }
-  // }, [fontsLoaded]);
+  const onLayoutRootView = useCallback(async () => {
+    if (fontsLoaded) {
+      await SplashScreen.hideAsync();
+    }
+  }, [fontsLoaded]);
 
-  // if (!fontsLoaded) {
-  //   return null;
-  // }
+  if (!fontsLoaded) {
+    return null;
+  }
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <TailwindProvider>

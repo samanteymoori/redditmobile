@@ -7,7 +7,7 @@ const Home = ({ navigation, route }) => {
   // getSnoowrap();
   useEffect(() => {
     getAll().then((res) => {
-      setPosts(res?.data?.data?.children);
+      setPosts(res?.data?.data?.children.slice(0, 10));
     });
   }, []);
 
